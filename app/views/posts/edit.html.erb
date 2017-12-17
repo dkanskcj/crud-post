@@ -1,0 +1,13 @@
+<h1><%= @post.id %>번 게시글을 수정할 화면입니다.</h1>
+<form action="/posts/update/<%= @post.id %>" data-confirm="정말로 수정하시겠습니까?">
+    <p>제목</p>
+    <input type="text" name="input_title" value="<%= @post.title %>">
+    <p>내용</p>
+    <input type="text" name="input_content" value="<%= @post.content %>">
+    <br>
+    <input type="submit" value="수정">
+    <input type="reset" value="다시입력">
+</form>
+<form action="/posts/all_view">
+    <input type="submit" value="되돌아가기">
+</form>

@@ -1,0 +1,19 @@
+<h1><%= @post.id %>번 게시글 입니다.</h1>
+ 
+<h2>제목 :<%= @post.title %></h2>
+
+<h2>내용 :<%= @post.content %></h2>
+
+<form action="/posts/all_view">
+    <input type="submit" value="목록으로">
+</form>
+<form action="/posts/new">
+    <input type="submit" value="글쓰기"></input>
+</form>
+<form action="/posts/delete/<%= @post.id %>" data-confirm="정말로 삭제하시겠습니까?">
+   <input type="submit" value="삭제하기"></input>
+</form>
+ 
+<form action="/posts/edit/<%= @post.id %>">
+  <input type="submit" value="수정하기">
+</form>
