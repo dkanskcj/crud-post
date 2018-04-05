@@ -32,7 +32,6 @@ class PostsController < ApplicationController
         @post.content = params[:input_content]
         @post.save
         redirect_to "/posts/view/#{@post.id}"
-        
     end
     
 end

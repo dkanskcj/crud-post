@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
   root 'posts#all_view'
   get '/posts/new' => 'posts#new'
+  get '/posts/create' => 'posts#create'
+  
   post '/posts/create' => 'posts#create'
   
   get '/posts/view/:post_id' => 'posts#view'
   get '/posts/all_view' => 'posts#all_view'
   
+  get '/posts/delete/:post_id' => 'posts#delete'
   post '/posts/delete/:post_id' => 'posts#delete'
   
   get '/posts/edit/:post_id' => 'posts#edit'
+  
+  get '/posts/update/:post_id' => 'posts#update'
   post '/posts/update/:post_id' => 'posts#update'
+  
   # /posts/delete/:post_id 에서 :post_id를 해주는 이유는 몇번 삭제할지 모르기떄문
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
